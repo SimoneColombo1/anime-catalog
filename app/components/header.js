@@ -35,7 +35,7 @@ export default function Header() {
 <nav>
   <ul>
     {NavLinks.map((data)=>(
-     <li><Link href={data.link}>{data.name}</Link></li>
+     <li><Link href={data.link} class="link">{data.name}</Link></li>
 
     ))}
   </ul>
