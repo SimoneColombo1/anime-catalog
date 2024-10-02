@@ -1,0 +1,15 @@
+.jumbo{
+    display: flex;
+    flex-direction: row;
+    padding: 4rem 1rem;
+    div{
+        width: 50vw;
+        
+    }
+    .img{
+        display: flex;
+        
+        align-items: center;
+        justify-content: center;
+    }
+}
