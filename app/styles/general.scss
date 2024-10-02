@@ -2,3 +2,27 @@ body{
     max-width: 1400px;
     margin: 0 auto;
 }
+
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color:#ea3c55  ;
+    padding: 1rem;
+    align-items: center;
+    nav{
+        ul{
+        display: flex;
+        flex-direction: row;
+        list-style: none;
+        li{
+            margin-right: 0.6rem;
+           a{
+            color: white;
+            text-decoration: none;
+        
+           } 
+    }
+    }
+}
+}
