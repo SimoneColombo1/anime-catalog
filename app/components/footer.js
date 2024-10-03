@@ -82,32 +82,32 @@ const footerLinks12 = [
 export default function Footer() {
   return (
    <footer>
-    <section class="links">
+    <section className="links">
          <ul>
           {footerInfoLinks.map((data)=>(
-          <li><a href="" class="link">{data}</a></li>
+          <li><a href="" className="link">{data}</a></li>
 
 
           ))}
          </ul>
          <ul>  {additionalFooterLinks.map((data)=>(
-          <li><a href="" class="link" >{data}</a></li>
+          <li><a href="" className="link" >{data}</a></li>
 
 
           ))}</ul>
          <ul>{moreFooterLinks.map((data)=>(
-          <li><a href="" class="link">{data}</a></li>
+          <li><a href="" className="link">{data}</a></li>
 
 
           ))}</ul>
          <ul>{footerLinks12.map((data)=>(
-          <li><a href="" class="link">{data}</a></li>
+          <li><a href="" className="link">{data}</a></li>
 
 
           ))}</ul>
     </section>
     <hr></hr>
-    <section class="socials">
+    <section className="socials">
       <div>
   <h4> I nostri social</h4>
 <Image src="/FooterIcons/facebook.svg" width={25} height={25} alt="facebook" />

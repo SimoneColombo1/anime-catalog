@@ -27,7 +27,7 @@ export default function AnimeSlider() {
  
 
   return (
-  <section class="AnimeSlider">
+  <section className="AnimeSlider">
    <h1>I migliori Anime</h1>
    <Swiper className="cards-container"  modules={[Navigation, Pagination, Autoplay]}
         

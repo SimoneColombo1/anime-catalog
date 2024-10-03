@@ -27,7 +27,7 @@ export default function MangaSlider() {
  
 
   return (
-  <section class="MangaSlider">
+  <section className="MangaSlider">
    <h1>I migliori Manga</h1>
    <Swiper className="cards-container"  modules={[Navigation, Pagination, Autoplay]}
         

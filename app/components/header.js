@@ -27,7 +27,7 @@ link: "/pages/Anime/SearchManga"
 export default function Header() {
   return (
    <header>
-    <div class="logo">
+    <div className="logo">
       <h1>LOGO</h1>
 
     </div>
@@ -35,7 +35,7 @@ export default function Header() {
 <nav>
   <ul>
     {NavLinks.map((data)=>(
-     <li><Link href={data.link} class="link">{data.name}</Link></li>
+     <li><Link href={data.link} className="link">{data.name}</Link></li>
 
     ))}
   </ul>

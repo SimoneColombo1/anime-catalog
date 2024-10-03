@@ -7,7 +7,7 @@ import MangaSlider from "./components/HomePage/MangaSlider";
 
 export default function Home() {
   return (
-  <section class="HomePage">
+  <section className="HomePage">
     <Jumbo/>
     <Search/>
     <AnimeSlider/>
