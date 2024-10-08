@@ -7,7 +7,7 @@ const NavLinks= [
 },
   {
 
-name:"i migliori anime",
+name:"I migliori anime",
 link: "/pages/Anime/BestAnime"
 },
 {
