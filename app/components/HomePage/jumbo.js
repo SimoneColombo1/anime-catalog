@@ -7,7 +7,7 @@ export default function Jumbo() {
   <div className="text">
       <h1>Benvenuto su Anime Catalog</h1>
     <p>Scopri l’affascinante mondo degli anime e dei manga con Anime Catalog, il tuo catalogo online dedicato a tutti gli appassionati di animazione giapponese! Che tu sia un veterano del genere o un neofita curioso, qui troverai una vasta selezione di titoli, recensioni, e informazioni approfondite per aiutarti a esplorare il tuo nuovo anime preferito.</p></div>
-  <div className="img"> <h1>IMMAGINE</h1></div>
+  <div className="img"> <Image src="/Images/Big3.jpg" width={800} height={400}/></div>
   </section>
   );
 }
