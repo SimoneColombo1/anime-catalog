@@ -1,15 +1,41 @@
+
+$bgprimary : #ea3c55;
+.main-container{
+    max-width: 1600px;
+    margin: 0 auto;
+}
 body{
-    max-width: 1400px;
     margin: 0 auto;
 }
 
 header{
+ 
+
+   background: url('../../public/patterns/sin.svg');
+  background-size: cover;
+  background-repeat: no-repeat;
+.logo{
+    filter: brightness(0) saturate(100%) invert(100%) sepia(2%) saturate(0%) hue-rotate(82deg) brightness(116%) contrast(100%);
+}
+
+  font-size: 1.1rem;
+
     display: flex;
+   flex-direction: column;
+    background-color:$bgprimary ;
+    padding:1rem;
+    align-items: center;
+    .header-container{
+    
+        display: flex;
     flex-direction: row;
     justify-content: space-between;
-    background-color:#ea3c55  ;
-    padding: 1rem;
-    align-items: center;
+       max-width: 1600px;
+       margin: 0 auto;
+       width: 100%;
+       vertical-align: middle;
+       align-items: center;
+    }
     nav{
         ul{
         display: flex;
@@ -44,6 +70,16 @@ footer{
     display: flex;
     flex-direction: column;
     background-color:#202a39 ;
+    .footer-container{
+       
+        display: flex;
+    flex-direction: column;
+    
+       max-width: 1600px;
+       margin: 0 auto;
+       width: 100%;
+   
+    }
     .links{
         display: flex;
         flex-direction: row;

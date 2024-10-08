@@ -82,6 +82,7 @@ const footerLinks12 = [
 export default function Footer() {
   return (
    <footer>
+    <section className="footer-container">
     <section className="links">
          <ul>
           {footerInfoLinks.map((data)=>(
@@ -117,7 +118,7 @@ export default function Footer() {
       <div>
         © 2024 Anime Catalog. All rights reserved.
       </div>
-    </section>
+    </section></section>
     </footer>
   );
 }

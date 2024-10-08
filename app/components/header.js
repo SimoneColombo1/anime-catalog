@@ -27,8 +27,9 @@ link: "/pages/Anime/SearchManga"
 export default function Header() {
   return (
    <header>
+    <section className="header-container">
     <div className="logo">
-      <h1>LOGO</h1>
+     <Image src="/Logo/MainLogo.png" width={210} height={50} alt="logo" className="logo"/>
 
     </div>
 
@@ -39,7 +40,8 @@ export default function Header() {
 
     ))}
   </ul>
-</nav>
+</nav></section>
+<section className="magicpattern"></section>
     </header>
   );
 }

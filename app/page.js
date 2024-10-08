@@ -3,7 +3,7 @@ import Jumbo from "./components/HomePage/jumbo";
 import Search from "./components/HomePage/Search";
 import AnimeSlider from "./components/HomePage/AnimeSlider";
 import MangaSlider from "./components/HomePage/MangaSlider";
-
+import StyleVariables from "./styles/variables.scss"
 
 export default function Home() {
   return (

@@ -1,8 +1,9 @@
+$bgprimary : #ea3c55;
 .Search{
 
 display: flex;
 flex-direction: row;
-background-color:#ea3c55 ;
+ background-color:$bgprimary;
 
 .anime{
     border-right: 1px solid white;

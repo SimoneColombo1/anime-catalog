@@ -5,8 +5,8 @@ export default function Jumbo() {
   return (
   <section className="jumbo">
   <div className="text">
-      <h1>Chi siamo</h1>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem accusantium illum ipsa commodi repellat minus, est aspernatur delectus obcaecati magnam quas, possimus itaque quo consequuntur quaerat deserunt voluptate quia suscipit nemo corrupti reiciendis consectetur? Tenetur, molestias est a magnam voluptas soluta dolores obcaecati cum, ipsum illo hic beatae possimus recusandae quibusdam harum sequi nulla qui aperiam magni odit ad sapiente quaerat quas! Id voluptatum quaerat blanditiis? Harum quos nobis, nisi aut molestias quae a quis asperiores recusandae quam magnam ab.</p></div>
+      <h1>Benvenuto su Anime Catalog</h1>
+    <p>Scopri l’affascinante mondo degli anime e dei manga con Anime Catalog, il tuo catalogo online dedicato a tutti gli appassionati di animazione giapponese! Che tu sia un veterano del genere o un neofita curioso, qui troverai una vasta selezione di titoli, recensioni, e informazioni approfondite per aiutarti a esplorare il tuo nuovo anime preferito.</p></div>
   <div className="img"> <h1>IMMAGINE</h1></div>
   </section>
   );
