@@ -6,6 +6,12 @@ import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 import { useEffect, useState } from 'react';
 import axios from "axios";
 import style from  "../../styles/home/UpcomingAnime.scss";
+import { Cute_Font} from "next/font/google";
+const cute_font = Cute_Font({
+  weight: '400',
+  subsets: ['latin'],
+})
+
 const IncomingAnime = () => {
   const [animeData, setAnimeData] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -32,7 +38,7 @@ useEffect(() => {
   return (
     <section className="IncomingAnime">
         <section className="anime-container">
-     <h1>Anime in Arrivo</h1> <Swiper
+     <h1 className={cute_font.className}>Anime in Arrivo</h1> <Swiper
         className="cards-container"
         modules={[Navigation, Pagination, Autoplay]}
         slidesPerView={1} 
