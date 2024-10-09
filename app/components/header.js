@@ -27,7 +27,7 @@ link: "/pages/Anime/SearchManga"
 export default function Header() {
   return (
    <header>
-    <section className="header-container">
+    <section className="header-container" id="header">
     <div className="logo">
      <Image src="/Logo/MainLogo.png" width={210} height={50} alt="logo" className="logo"/>
 

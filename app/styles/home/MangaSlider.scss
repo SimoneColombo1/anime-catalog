@@ -4,22 +4,48 @@ $bgprimary : #ea3c55;
    background-color: $bgprimary;
     padding: 3rem 1rem;
     margin-bottom: 3rem;
+    border-radius: 1rem;
+     .title {
+        
+        width: 100%;
+        display:flex ;
+        justify-content: center;
+        h1{
+         color:white;
+        font-size: 2rem;
+    }}
+
  .cards-container{
     display: flex;
     flex-direction: row;
     overflow: hidden;
-    justify-content: center;
+   
     flex-wrap: nowrap;
     div{
         display: flex;
         flex-direction: row;
+        
    .card{
         display: flex;
         margin: 0.4rem;
+        border-radius: 1rem;
         min-width:  20rem;
-        border: solid 1px black;
+        width: 20rem;
+        padding: 0.4rem;
+       
+        align-items: center;
+       flex-direction: column;
         height: 25rem;
         background-color: white;
+           img{
+            height: 8rem;
+            width: 7rem;
+            border-radius: 1rem;
+        }
+        span{
+            margin-top: 1rem;
+         
+        }
     }}
  }
 

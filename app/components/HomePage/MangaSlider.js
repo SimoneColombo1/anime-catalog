@@ -4,41 +4,54 @@ import {Swiper,SwiperSlide} from "swiper/react"
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import { Navigation, Pagination, Autoplay } from 'swiper/modules';
-
+import {useEffect,useState} from 'react';
+import axios from "axios";
 import Image from "next/image";
 import style from "../../styles/home/MangaSlider.scss"
-const animeList = [
-  "Naruto",
-  "Attack on Titan",
-  "Fullmetal Alchemist: Brotherhood",
-  "My Hero Academia",
-  "Demon Slayer",
-  "One Piece",
-  "Death Note",
-  "Sword Art Online",
-  "Hunter x Hunter",
-  "Tokyo Ghoul"
-];
+
+const MangaSlider = () => {
+  const [MangaData, setMangaData] = useState(null);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const res = await axios.get('https://api.jikan.moe/v4/top/manga');
+      setMangaData(res.data);
+      setLoading(false);
+    };
+
+    fetchData();
+  }, []);
+
+  if (loading) {
+    return <p>Loading...</p>;
+  }
 
 
 
-
-export default function MangaSlider() {
  
 
   return (
   <section className="MangaSlider">
-   <h1>I migliori Manga</h1>
+    <div className="title"><h1>I Manga più votati</h1></div>
    <Swiper className="cards-container"  modules={[Navigation, Pagination, Autoplay]}
         
-        slidesPerView={5}
+        slidesPerView={6}
         
-      
+      loop={true}
         autoplay={{ delay: 3000 }}>
-     {animeList.map((data)=>(
- <SwiperSlide className="card">
-{data}
-     </SwiperSlide>
+     {MangaData.data.map((manga)=>(
+ <div className="single-card">
+ <SwiperSlide className="card"  key={manga.mal_id}>
+<span><img src={manga.images.jpg.image_url}  alt={manga.title_english} className="manga-image"/></span>
+
+<span>{manga.title_english ? manga.title_english : manga.title}</span>
+<span> capitoli: {manga.chapters}</span>
+<span> genere: {manga.genres.map((genre) => genre.name).join(', ')}</span>
+<span>{manga.score}</span>
+
+<span></span>
+     </SwiperSlide></div>
 
 
      ))}
@@ -50,3 +63,4 @@ export default function MangaSlider() {
   </section>
   );
 }
+export default MangaSlider;

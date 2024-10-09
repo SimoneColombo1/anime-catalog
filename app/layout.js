@@ -4,7 +4,7 @@ import Footer from "./components/footer";
 import Header from "./components/header";
 import StyleVariables from "./styles/variables.scss"
 import { Montserrat} from 'next/font/google'
- 
+ import Image from "next/image";
 const montserrat = Montserrat({
   weight: '400',
   subsets: ['latin'],
@@ -21,7 +21,13 @@ export default function RootLayout({ children }) {
       <Header/>
     
       <section className="main-container">
-        {children}</section>
+        {children}
+        <div className="go-to-top">
+          <a href="#header">
+          <Image src="/patterns/arrow.png" height={50} width={50}/>
+          </a>
+          </div>
+          </section>
         <Footer/>
       </body>
     </html>
