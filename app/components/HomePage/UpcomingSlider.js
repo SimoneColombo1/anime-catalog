@@ -49,7 +49,7 @@ useEffect(() => {
         {animeData.data.map((anime) => (
           <SwiperSlide key={anime.mal_id} className="card"> 
         <div className="image-container"> <img src={anime.images.jpg.large_image_url}/></div> 
-            <span>{anime.title}</span> 
+            <span>{anime.title_english}</span> 
           </SwiperSlide>
         ))}
       </Swiper></section>

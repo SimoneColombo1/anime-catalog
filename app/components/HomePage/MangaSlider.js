@@ -15,7 +15,7 @@ const MangaSlider = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      const res = await axios.get('https://api.jikan.moe/v4/top/manga');
+      const res = await axios.get('https://api.jikan.moe/v4/top/manga?limit=10');
       setMangaData(res.data);
       setLoading(false);
     };

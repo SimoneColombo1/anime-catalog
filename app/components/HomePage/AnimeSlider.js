@@ -17,7 +17,7 @@ const AnimeSlider = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      const res = await axios.get('https://api.jikan.moe/v4/top/anime');
+      const res = await axios.get('https://api.jikan.moe/v4/top/anime?limit=10');
       setAnimeData(res.data);
       setLoading(false);
     };
@@ -52,7 +52,7 @@ const AnimeSlider = () => {
 <span>
   Episodi:
   {anime.episodes}</span>
-<span> genere: {anime.genres.map((genre) => genre.name).join(', ')}</span>
+<span> genere:{anime.genres.map((genre) => genre.name).join(', ')}</span>
 <span>{anime.score}</span>
 
 <span></span>
