@@ -130,27 +130,7 @@ select{
             height: 80%;
         }
     }
-    
-    }
-    .load-more{
-        display: flex;
-        flex-direction: row;
-        height: 4rem;
-        width: 100%;
-        align-items: center;
-        justify-content: center;
-        padding: 2rem;
-        .loader{
-            padding: 0.6rem 3rem;
-            background-color: white;
-              border: 1px solid $bg-primary;
-              border-radius: 1rem;
-              &:hover{
-                background-color: $bg-primary;
-                color: white;
-              }
-
-        }
+ 
     }
 }
 
