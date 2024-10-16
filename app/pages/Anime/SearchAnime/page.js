@@ -12,7 +12,7 @@ const [genreData, setGenreData]=useState(null);
   const [type, setType] = useState('');
   const [order_by, setOrderBy] = useState('title');
   const [sort, setSort] = useState('asc');
-  
+   const [noResults, setNoResults] = useState(false);
       const FunctionGetTitle = (event) => {
     setTitle(event.target.value);
     console.log(getTitle)
@@ -55,7 +55,7 @@ const fetchData = async () => {
  //? Api per la ricerca di anime
       const res = await axios.get( `https://api.jikan.moe/v4/anime?q=${ getTitle}&genres=${genre}&type=${type}&order_by=${order_by}&sort=${sort}`);
       setAnimeData(res.data);
-      
+        setNoResults(res.data.data.length === 0); 
 //< Api per prendere tutti i generi
      const response= await axios.get(`https://api.jikan.moe/v4/genres/anime`);
      setGenreData(response.data)
@@ -125,6 +125,14 @@ special
 </select>
 </div>
 </section>
+  {noResults && !loading && (
+        <div className="error">
+        <div className="no-results">
+          <p>Nessun anime trovato. Prova a modificare i criteri di ricerca.</p>
+        </div></div>
+      )}
+
+
 <section className="anime">
 
 

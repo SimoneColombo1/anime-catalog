@@ -135,3 +135,19 @@ select{
 }
 
 }
+
+.error{
+
+width: 100%;
+display: flex;
+justify-content: center;
+.no-results {
+  background-color: $bg-primary;
+  color: white;
+  font-size: 1.5rem;
+  padding: 1rem;
+  text-align: center;
+  border-radius:1rem;
+  margin: 1rem;
+  width: 40%;
+}}
