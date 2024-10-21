@@ -5,6 +5,7 @@ import axios from "axios";
 import style from "../../../styles/general/searchPage.scss"
 import axiosRetry from "axios-retry";
 import { debounce } from 'lodash';
+import Link from "next/link";
 
 const SearchAnime=()=>{
 const [animeData, setAnimeData] = useState(null);
@@ -166,6 +167,7 @@ special
     <span>stato: {anime.status ? anime.status : "Non disponibile"}</span>
     <span>score: {anime.score ? anime.score : "Non disponibile"}</span>
     <span>Genere: {anime.genres.map((genre) => genre.name).join(', ') ?anime.genres.map((genre) => genre.name).join(', '): "Non disponibile" }</span>
+    <Link href={`/pages/Anime/${anime.mal_id}`}>Vedi dettagli</Link>
    </div>
     </div>
   
