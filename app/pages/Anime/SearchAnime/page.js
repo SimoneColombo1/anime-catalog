@@ -115,31 +115,31 @@ return(
 
 <select>
   <option value="">Media</option>
-  <option value=""onChange={getType}>Tutto</option>
-  <option id ="tv" value="tv"onChange={getType}>
+  <option value=""onClick={getType}>Tutto</option>
+  <option id ="tv" value="tv"onClick={getType}>
 Serie
   </option>
-  <option   id="movie" value="movie"onChange={getType}>
+  <option   id="movie" value="movie"onClick={getType}>
 film
   </option>
-  <option id="ova"  value="ova"onChange={getType}>
+  <option id="ova"  value="ova"onClick={getType}>
 Ova
   </option>
-  <option  id="special" value="special"onChange={getType}>
+  <option  id="special" value="special"onClick={getType}>
 special
   </option>
 </select>
 <select>
-  <option value=""onChange={getOrder}>Ordina</option>
-  <option value="title"onChange={getOrder}>Ordine Alfabetico</option>
-  <option value="score"onChange={getOrder}>Voti</option>
-  <option value="episodes"onChange={getOrder}>Numero episodi</option>
+  <option value=""onClick={getOrder}>Ordina</option>
+  <option value="title"onClick={getOrder}>Ordine Alfabetico</option>
+  <option value="score"onClick={getOrder}>Voti</option>
+  <option value="episodes"onClick={getOrder}>Numero episodi</option>
 </select>
 
 <select>
-  <option value=""onChange={getSort}>Direzione</option>
-  <option value="asc"onChange={getSort}>Crescente</option>
-  <option value="desc"onChange={getSort}>Decrescente</option>
+  <option value=""onClick={getSort}>Direzione</option>
+  <option value="asc"onClick={getSort}>Crescente</option>
+  <option value="desc"onClick={getSort}>Decrescente</option>
 </select>
 </div>
 </section>

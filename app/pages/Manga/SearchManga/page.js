@@ -88,7 +88,7 @@ return(
   <section className="search-manga">
    
 <section className="search-title">
-  <h3>Trova l'manga adatto a te</h3>
+  <h3>Trova il manga adatto a te</h3>
     <input
         type="text"
         placeholder="Cerca"
@@ -108,38 +108,38 @@ return(
 
 <select>
   <option value="">Tipo</option>
-  <option value=""onChange={getType}>Tutto</option>
-  <option id ="manga" value="manga"onChange={getType}>
+  <option value=""onClick={getType}>Tutto</option>
+  <option id ="manga" value="manga"onClick={getType}>
 Manga
   </option>
-  <option   id="novel" value="novel"onChange={getType}>
+  <option   id="novel" value="novel"onClick={getType}>
 Novel
   </option>
-  <option id="lightnovel"  value="lightnovel"onChange={getType}>
+  <option id="lightnovel"  value="lightnovel"onClick={getType}>
 Light Novel
   </option>
-  <option  id="oneshot" value="oneshot"onChange={getType}>
+  <option  id="oneshot" value="oneshot"onClick={getType}>
 One Shot
   </option>
-  <option  id="manhwa" value="manhwa"onChange={getType}>
+  <option  id="manhwa" value="manhwa"onClick={getType}>
 manhwa
   </option>
-  <option  id="manhua" value="manhua"onChange={getType}>
+  <option  id="manhua" value="manhua"onClick={getType}>
 manhua
   </option>
 </select>
 <select>
-  <option value=""onChange={getOrder}>Ordina</option>
-  <option value="title"onChange={getOrder}>Ordine Alfabetico</option>
-  <option value="score"onChange={getOrder}>Voti</option>
-  <option value="chapters"onChange={getOrder}>Numero capitoli</option>
-  <option value="volumes"onChange={getOrder}>Numero volumi</option>
+  <option value=""onClick={getOrder}>Ordina</option>
+  <option value="title"onClick={getOrder}>Ordine Alfabetico</option>
+  <option value="score"onClick={getOrder}>Voti</option>
+  <option value="chapters"onClick={getOrder}>Numero capitoli</option>
+  <option value="volumes"onClick={getOrder}>Numero volumi</option>
 </select>
 
 <select>
-  <option value=""onChange={getSort}>Direzione</option>
-  <option value="asc"onChange={getSort}>Crescente</option>
-  <option value="desc"onChange={getSort}>Decrescente</option>
+  <option value=""onClick={getSort}>Direzione</option>
+  <option value="asc"onClick={getSort}>Crescente</option>
+  <option value="desc"onClick={getSort}>Decrescente</option>
 </select>
 </div>
 </section>
