@@ -8,12 +8,24 @@ import {useEffect,useState} from 'react';
 import axios from "axios";
 import Image from "next/image";
 import style from "../../styles/home/AnimeSlider.scss"
+import axiosRetry from "axios-retry";
+axiosRetry(axios, {
+  retries: 3, // Numero di tentativi
+  retryDelay: (retryCount) => {
+    console.log(`Retry attempt: ${retryCount}`);
+    return retryCount * 2000; // Ritardo di 2 secondi tra ogni tentativo
+  },
+  retryCondition: (error) => {
+    return error.response.status === 429; // Riprova solo per errore 429
+  }
+});
 
 
 
 const AnimeSlider = () => {
   const [animeData, setAnimeData] = useState(null);
   const [loading, setLoading] = useState(true);
+  
 
   useEffect(() => {
     const fetchData = async () => {

@@ -7,10 +7,22 @@ import { useEffect, useState } from 'react';
 import axios from "axios";
 import style from  "../../styles/home/UpcomingAnime.scss";
 import { Cute_Font} from "next/font/google";
+import axiosRetry from "axios-retry";
 const cute_font = Cute_Font({
   weight: '400',
   subsets: ['latin'],
 })
+axiosRetry(axios, {
+  retries: 3, // Numero di tentativi
+  retryDelay: (retryCount) => {
+    console.log(`Retry attempt: ${retryCount}`);
+    return retryCount * 2000; // Ritardo di 2 secondi tra ogni tentativo
+  },
+  retryCondition: (error) => {
+    return error.response.status === 429; // Riprova solo per errore 429
+  }
+});
+
 
 const IncomingAnime = () => {
   const [animeData, setAnimeData] = useState(null);
@@ -49,7 +61,7 @@ useEffect(() => {
         {animeData.data.map((anime) => (
           <SwiperSlide key={anime.mal_id} className="card"> 
         <div className="image-container"> <img src={anime.images.jpg.large_image_url}/></div> 
-            <span>{anime.title_english}</span> 
+            <span>{anime.title_english ? anime.title_english : anime.title }</span> 
           </SwiperSlide>
         ))}
       </Swiper></section>

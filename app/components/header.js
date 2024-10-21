@@ -2,25 +2,30 @@ import Image from "next/image";
 import Link from "next/link";
 const NavLinks= [
 {
+id:1,
   name:"Home",
   link:"/"
 },
   {
 
+id:2,
 name:"I migliori anime",
 link: "/pages/Anime/BestAnime"
 },
 {
+id:3,
 name:"I migliori manga",
-link: "/pages/Anime/BestManga"
+link: "/pages/Manga/BestManga"
 },
 {
+id:4,
 name:"Cerca il tuo anime",
 link: "/pages/Anime/SearchAnime"
 },
 {
+id:5,
 name:"Cerca il tuo Manga",
-link: "/pages/Anime/SearchManga"
+link: "/pages/Manga/SearchManga"
 }
 ]
 
@@ -36,7 +41,7 @@ export default function Header() {
 <nav>
   <ul>
     {NavLinks.map((data)=>(
-     <li><Link href={data.link} className="link">{data.name}</Link></li>
+     <li key={data.id}><Link href={data.link} className="link">{data.name}</Link></li>
 
     ))}
   </ul>

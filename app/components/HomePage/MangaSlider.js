@@ -8,10 +8,21 @@ import {useEffect,useState} from 'react';
 import axios from "axios";
 import Image from "next/image";
 import style from "../../styles/home/MangaSlider.scss"
-
+import axiosRetry from "axios-retry";
 const MangaSlider = () => {
   const [MangaData, setMangaData] = useState(null);
   const [loading, setLoading] = useState(true);
+axiosRetry(axios, {
+  retries: 3, // Numero di tentativi
+  retryDelay: (retryCount) => {
+    console.log(`Retry attempt: ${retryCount}`);
+    return retryCount * 2000; // Ritardo di 2 secondi tra ogni tentativo
+  },
+  retryCondition: (error) => {
+    return error.response.status === 429; // Riprova solo per errore 429
+  }
+});
+
 
   useEffect(() => {
     const fetchData = async () => {

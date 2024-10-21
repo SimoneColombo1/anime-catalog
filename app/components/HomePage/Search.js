@@ -14,7 +14,7 @@ export default function Search() {
   <div className="manga">
 <span><h3>Trova il manga adatto a te</h3>  <Image src="/Images/Berserk.png" alt="A berserk image" width={180} height={200}/></span>
 
-<Link href="/pages/Anime/SearchManga"><button> Cerca</button></Link>
+<Link href="/pages/Manga/SearchManga"><button> Cerca</button></Link>
   </div>
   </section>
   );
