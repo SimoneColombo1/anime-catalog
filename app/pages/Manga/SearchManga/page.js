@@ -2,6 +2,7 @@
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import Link from "next/link";
 import axiosRetry from "axios-retry";
 import style from "../../../styles/general/searchPage.scss"
 const Searchmanga=()=>{
@@ -168,6 +169,7 @@ manhua
     <span>stato: {manga.status ? manga.status : "Non disponibile"}</span>
     <span>score: {manga.score ? manga.score : "Non disponibile"}</span>
     <span>Genere: {manga.genres.map((genre) => genre.name).join(', ') ?manga.genres.map((genre) => genre.name).join(', '): "Non disponibile" }</span>
+    <Link href={`/pages/Manga/${manga.mal_id}`}>Vedi dettagli</Link>
    </div>
     </div>
   
